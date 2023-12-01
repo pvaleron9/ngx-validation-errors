@@ -14,7 +14,7 @@ function wrapMethod(subject$: Subject<void>, name: string, control: AbstractCont
   control[name] = wrappedMethod;
 }
 
-export function toChangeObservable(control: AbstractControl): Observable<void> {
+export function toChangeObservable(control: AbstractControl): Observable<any> {
 
   const touchedChanges$ = new Subject<void>();
 

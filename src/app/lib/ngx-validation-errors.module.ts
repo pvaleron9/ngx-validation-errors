@@ -32,34 +32,31 @@ export function configFactory(customConfig: ValidationErrorsConfig, currentConfi
 }
 
 @NgModule({
-  declarations: [
-    InputErrorsComponent,
-    FormFieldContainerComponent,
-    FormFieldEmptyContainerDirective,
-    FormArrayContainerComponent,
-    ValidationContextComponent,
-    MapToMessagePipe,
-    InnerMapToMessagePipe
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    InputErrorsComponent,
-    FormFieldContainerComponent,
-    FormArrayContainerComponent,
-    ValidationContextComponent,
-    FormFieldEmptyContainerDirective
-  ],
-  entryComponents: [
-    InputErrorsComponent
-  ]
+    declarations: [
+        InputErrorsComponent,
+        FormFieldContainerComponent,
+        FormFieldEmptyContainerDirective,
+        FormArrayContainerComponent,
+        ValidationContextComponent,
+        MapToMessagePipe,
+        InnerMapToMessagePipe
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    exports: [
+        InputErrorsComponent,
+        FormFieldContainerComponent,
+        FormArrayContainerComponent,
+        ValidationContextComponent,
+        FormFieldEmptyContainerDirective
+    ]
 })
 export class NgxValidationErrorsModule {
 
-  static forRoot(config?: ValidationErrorsConfig): ModuleWithProviders {
+  static forRoot(config?: ValidationErrorsConfig): ModuleWithProviders<NgxValidationErrorsModule> {
     return {
       ngModule: NgxValidationErrorsModule,
       providers: [

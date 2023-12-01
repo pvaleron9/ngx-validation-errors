@@ -5,6 +5,7 @@ import {
   ComponentRef,
   ElementRef,
   HostBinding,
+  Injectable,
   Input,
   OnDestroy,
   Renderer2,
@@ -17,6 +18,7 @@ import {AbstractControl} from '@angular/forms';
 import {Observable, Subscription} from 'rxjs';
 import {toChangeObservable} from './toChangeObservable';
 
+@Injectable()
 export abstract class FormValidationContainer implements AfterContentInit, OnDestroy {
 
   @Input() customErrorMessages: {} = {};
@@ -64,6 +66,7 @@ export abstract class FormValidationContainer implements AfterContentInit, OnDes
   }
 
   addErrorComponent() {
+    console.log(this.errorsContainer)
     if (this.errorsContainer && !this.componentRef) {
       this.errorsContainer.clear();
       const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.validationErrorsConfig.errorComponent as any);

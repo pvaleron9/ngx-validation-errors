@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
-import {ValidationContextComponent} from '@xtream/ngx-validation-errors';
+import { ValidationContextComponent } from '../lib/validation-context.component';
 
 @Component({
   selector: 'app-main-from',
